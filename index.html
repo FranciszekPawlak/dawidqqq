@@ -1,0 +1,70 @@
+<!-- 
+    1. Wyświetl 10 postów w .posts-container
+    2. Do stworzenia każdego postu wykorzystaj funkcje createPost
+    3. Dodaj formularz do dodawania kolejnego postu o identycznej strukturze jak inne posty i dodawaj nowy post do tablicy
+    4. Dodaj przycisk do sortowania postów
+    5. Dodaj przycisk do usuwania postu z tablicy
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dawideqqq</title>
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container{
+            background-color: black;
+            color: white;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .posts-container{
+            width: 50vw;
+        }
+
+        .post{
+            /* tutaj wstaw style stwojego posta*/
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Posty Dawida :D</h1>
+    <div class="posts-container"></div>
+    </div>
+</body>
+</html>
+<script>
+
+const getPosts = async ()=>{
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts")
+    const data = await response.json()
+    return data
+}
+
+const createPost = element =>{
+
+}
+
+const mainScript = async ()=>{
+    const posts = await  getPosts()
+    console.log(posts)
+}
+
+mainScript()
+
+
+</script>
